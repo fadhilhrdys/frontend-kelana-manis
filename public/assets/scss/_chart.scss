@@ -1,0 +1,195 @@
+.container-detail-order {
+    margin: 15px 20px 0 20px;
+
+    .list-order {
+        margin-bottom: 15px;
+        padding-bottom: 13px;
+        border-bottom: 2px solid $line-color;
+
+        .trash {
+            cursor: pointer;
+        }
+
+        .detail-order {
+            display: flex;
+
+            .qty-order {
+                padding: 15px 25px;
+                border: 1px solid $line-color;
+                border-radius: 100%;
+                font-size: 18px;
+            }
+
+            .wrapper-menu-order {
+                display: flex;
+                margin-left: 15px;
+                justify-content: space-between;
+                width: 100%;
+                position: relative;
+
+                .detail-menu-order {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap : wrap;
+                    width: 80%;
+
+                    .title-menu-order {
+                        font-weight: bold;
+                    }
+
+                    .addons {
+                        font-size: 12px;
+                        padding-top: 15px;
+                    }
+                }
+
+                .price-menu-order {
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: right;
+
+                    .price-addons {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+
+                    p {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .note {
+        p {
+            font-size: 0.7em;
+            font-style: italic;
+            width: 80%;
+        }
+    }
+
+    .sub-total {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 23px 0;
+        border-bottom: 2px solid $line-color;
+
+        .price-subtotal {
+            font-weight: bold;
+        }
+    }
+}
+
+.empty-state {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 35%;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align:center;
+    }
+
+    button {
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: $btn-color;
+        border-radius: $radius;
+        padding: 1rem 9rem;
+        cursor: pointer;
+    }
+}
+
+.container-input-delivery {
+    margin: 15px 20px;
+
+    .title-input-delivery {
+        font-weight: bold;
+    }
+
+    .form-input-delivery {
+        margin: 14px 0;
+
+        .input-form {
+            margin-bottom: 14px;
+
+            input {
+                margin-top: 3px;
+                width: 100%;
+                border-radius: $input-radius;
+                outline: none;
+                border: 1px solid $line-color;
+                background-color: $bg-color;
+                height: 40px;
+                padding: 0 10px;
+
+                &::placeholder {
+                    color: #c4c4c4;
+                    font-size: 12px;
+                }
+            }
+
+            textarea {
+                margin-top: 3px;
+                border-radius: $input-radius;
+                outline: none;
+                border: 1px solid $line-color;
+                background-color: $bg-color;
+                padding: 10px;
+                width: 100%;
+
+                &::placeholder {
+                    color: #c4c4c4;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.container-price {
+    margin: 20px 20px;
+    border-top: 2px solid $line-color;
+
+    .fee-delivery {
+        margin: 14px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .price-fee {
+            font-weight: bold;
+        }
+    }
+
+    .total-order {
+        margin: 14px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .price-total {
+            font-weight: bold;
+        }
+    }
+
+    .btn-order {
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: $btn-color;
+        border-radius: $radius;
+        padding: 8px 0;
+        cursor: pointer;
+    }
+}

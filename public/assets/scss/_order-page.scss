@@ -1,0 +1,63 @@
+.swiper-container {
+    margin: 0 auto 0px auto;
+    width: 90%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.container-po {
+    margin: 29px 20px;
+    background-color: $bg-color;
+    padding: 20px;
+    border-radius: $radius;
+
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px 0 20px 0;
+    }
+
+    .btn-menu-order {
+        width: 100%;
+        padding: 8px 0;
+        border-radius: $radius;
+        background-color: $btn-color;
+        border: none;
+        outline: none;
+    }
+}
+
+.container-time {
+    background-color: $bg-color;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: $radius;
+    text-align: center;
+
+    .title-time { font-size: 18px; letter-spacing: 0.02em;}
+
+    .timer-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 16px 0;
+
+        .timer {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            
+
+            #day, #hour, #minute, #second {
+                margin-right: 5px;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+    }
+}

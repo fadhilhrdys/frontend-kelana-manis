@@ -1,0 +1,47 @@
+.container-price-payment {
+    margin: 76px 20px 31px 20px;
+    h1 { font-weight: bold; font-size: 18px; }
+
+    .price-payment {
+        background-color: $bg-color;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        padding: 39px 0;
+        border-radius: $radius;
+        p { font-size: 22px; font-weight: bold; }
+    }
+}
+
+.container-payment-methods {
+    margin: 0 20px;
+    h1 { font-size: 18px; font-weight: bold; margin-bottom: 11px; }
+
+    .container-bank {
+        padding: 31px 0 8px 0;
+        border-bottom: 2px solid $line-color;
+
+        .bank {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 23px;
+            img { margin-right: 21px; width: 95px; height: 30px; }
+        }
+    }
+}
+
+.container-upload-payment {
+    margin: 27px 20px;
+    .upload-payment { margin: 23px 0 40px 0; }
+    
+    .btn-payment {
+        width: 100%;
+        background-color: $btn-color;
+        border: none;
+        outline: none;
+        border-radius: $radius;
+        padding: 8px 0;
+        cursor: pointer;
+    }
+}

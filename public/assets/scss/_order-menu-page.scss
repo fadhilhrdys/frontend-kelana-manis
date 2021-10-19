@@ -1,0 +1,83 @@
+.header-menu-order {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-color;
+    padding: 10px 15px;
+    border-radius: $radius;
+
+    h1 {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .bags {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .badge {
+            background-color: $line-color;
+            position: absolute;
+            padding: 0 4px;
+            border-radius: 50px;
+            font-size: 9px;
+            left: 10px;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+    }
+}
+
+.container-menu-order {
+    margin: 0 20px;
+
+    .menu-order-category {
+        margin: 26px 0;
+        .title {
+            padding-bottom: 7px;
+            border-bottom: 2px solid $line-color;
+    
+            h2 { font-size: 18px; font-weight: bold;}
+        }
+
+        .menu-order {
+            margin-top: 30px ;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px ;
+            
+            .menu-order-items {
+                background-color: $bg-color;
+                padding: 20px 10px;
+                border-radius: $radius;
+                text-align: center;
+
+                img { 
+                    width: 60%;
+                    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+                }
+
+                .detail-menu-order {
+                    text-align: left;
+                    margin-top: 10px;
+                    
+                    p {
+                        font-size: 12px;
+                    }
+
+                    .title-menu-order {
+                        height: 40px;
+                    }
+
+                    .harga-menu-order {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

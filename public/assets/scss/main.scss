@@ -1,0 +1,197 @@
+/* reset CSS and add variabels */
+@font-face {
+    font-family: 'Renner*';
+    src: url('../font/Renner_\ 400.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font: 400 14px 'Renner*';
+    box-sizing: border-box;
+    color: #244eb8;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: 0.03em;
+}
+
+p {
+    letter-spacing: 0.02em;
+}
+
+a {
+    text-decoration: none;
+}
+
+$line-color: #f9b4e4;
+$btn-color: #fdd2f0;
+$bg-color : #fdf8f4;
+$radius: 20px;
+$input-radius: 10px;
+
+/* reset CSS and add variabels */
+
+// navigation Bar
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .links {
+        display: none;
+
+        &.slide {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            background-color: $bg-color;
+        }
+
+        a {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .menu-bar {
+        height: 20px;
+        width: 32px;
+        cursor: pointer;
+    }
+
+    .cancel {
+        display: none;
+        position: absolute;
+        right: 20px;
+        z-index: 6;
+        cursor: pointer;
+    }
+
+    .title-header {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+// end
+
+/* home page */
+@import 'home';
+/* end */
+
+/* order page */
+@import 'order-page';
+/* end */
+
+/* menu order page */
+@import 'order-menu-page';
+/* end */
+
+/* detail menu order */
+@import 'detail-menu-order';
+/*end*/
+
+/* chart */
+@import 'chart';
+/* end */
+
+/* payment */
+@import 'payment';
+/* end */
+
+/* my order */
+@import 'my-order';
+/* end */
+
+/* footer */
+.container-footer {
+    margin-top: 50px;
+    background-color: $bg-color;
+    padding: 17px 0;
+
+    h2 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .profile-kelana {
+        margin: 0 20px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 9px 0;
+        }
+    }
+
+    .links-footer {
+        margin: 35px 20px;
+
+        .nav-footer {
+            margin-top: 9px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            a {
+                margin-bottom: 9px;
+            }
+        }
+    }
+
+    .sosial-media {
+        margin: 0 20px;
+
+        .sosmed {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-left: 6px;
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 60px;
+        text-align: center;
+
+        p {
+            color: #c4c4c4;
+        }
+    }
+}
+
+
+/* Responsive breakpoint */
+@media (min-width: 550px) {
+    body {
+        margin: 0 auto;
+        width: 450px;
+
+        nav {
+            margin: 0 20px;
+        }
+    }
+}

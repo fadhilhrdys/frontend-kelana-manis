@@ -1,0 +1,109 @@
+.container-detail-menu {
+    margin: 30px 20px 0 20px;
+    text-align: center;
+
+    .images-detail-menu {
+        background-color: $bg-color;
+        border-radius: $radius;
+        padding: 20px 0;
+
+        img {
+            width: 30%;
+            filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.25));
+        }
+    }
+
+    .detail-menu {
+        font-size: 18px;
+        margin-top: 22px;
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.container-add-ons {
+    margin: 35px 20px;
+
+    .container-toping {
+
+        p {
+            font-size: 18px;
+        }
+
+        .toping {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+
+            input {
+                display: none;
+            }
+
+            .name-toping {
+                border: 1px solid $line-color;
+                padding: 10px 50px;
+                border-radius: $radius;
+                cursor: pointer;
+            }
+
+            input:checked~label {
+                background-color: $btn-color;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+
+            .txt-toping {
+                margin-left: 10px;
+                visibility: hidden;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .container-quantity {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        padding-bottom: 26px;
+        border-bottom: 2px solid $line-color;
+
+        p {
+            font-size: 18px;
+        }
+
+        .qty-wrapper {
+            margin-left: 36px;
+            display: flex;
+            align-items: center;
+
+            .qty {
+                margin: 0 23px;
+                font-size: 18px;
+                outline: none;
+                width: 30px;
+                text-align: center;
+                border: none;
+            }
+
+            .btn-minus,
+            .btn-plus {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .btn-add {
+        margin-top: 26px;
+        border: none;
+        outline: none;
+        background-color: $btn-color;
+        border-radius: $radius;
+        padding: 8px 0;
+        width: 100%;
+        cursor: pointer;
+    }
+}
