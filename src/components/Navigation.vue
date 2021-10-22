@@ -2,9 +2,9 @@
   <nav>
     <div class="logo"><img src="assets/img/logo.png" alt="" /></div>
     <div class="links">
-      <a href="home.html"> Home </a>
-      <a href="#"> Menu </a>
-      <a href="order-page.html"> Pre Order </a>
+      <router-link to="/"> Home </router-link>
+      <router-link to="/menu"> Menu </router-link>
+      <router-link to="/shop"> Pre Order </router-link>
     </div>
     <img class="menu-bar" @click="showMenu" src="assets/img/menu-bar.png" />
     <img

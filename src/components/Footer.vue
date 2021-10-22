@@ -13,9 +13,9 @@
     <div class="links-footer">
       <h2>Links</h2>
       <div class="nav-footer">
-        <a href="home.html"> Home </a>
-        <a href="#"> Menu </a>
-        <a href="order-page.html"> Order </a>
+        <router-link to="/"> Home </router-link>
+        <router-link to="/menu"> Menu </router-link>
+        <router-link to="/shop"> Pre - Order </router-link>
       </div>
     </div>
 
@@ -23,7 +23,7 @@
       <h2>Follow us on sosial media</h2>
       <div class="sosmed">
         <img src="assets/img/ig.png" alt="" />
-        <a href="#"> @kelana_manis </a>
+        <a href="instagram.com"> @kelana_manis </a>
       </div>
     </div>
 
