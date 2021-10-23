@@ -6,7 +6,7 @@ import Menu from '../views/Menu.vue'
 import DetailMenu from '../views/DetailMenu.vue'
 import Chart from '../views/Chart.vue'
 import Payment from '../views/Payment.vue'
-import MyOrder from '../views/MyOrder.vue'
+import SuccessState from '../views/SuccessState.vue'
 
 Vue.use(VueRouter)
 
@@ -42,9 +42,9 @@ const routes = [
     component: Payment
   },
   {
-    path: '/myorder',
-    name: 'MyOrder',
-    component: MyOrder
+    path: '/success',
+    name: 'SuccessState',
+    component: SuccessState
   }
 ]
 
