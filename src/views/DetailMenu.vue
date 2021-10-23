@@ -22,7 +22,8 @@
             type="checkbox"
             id="toping"
             name="toping"
-            value="brown-sugar"
+            true-value="Brown Sugar"
+            false-value=" "
             v-model="bagsUser.toping"
           />
           <label for="toping" class="name-toping" @click="getToping">
@@ -112,13 +113,12 @@ export default {
         name: name,
         // jika toping true maka price ditambah 5000
         totalPrice: toping ? price + 5000 : price,
-        // jika toping true ganti jadi brown sugar
-        toping: toping ? "Brown Sugar" : " ",
+        toping: toping,
         quantity: quantity,
       };
       // push paramater menu ke bagsUser
       this.bagsUser.push(bagsStored);
-      // lalu simpan di locak storage dengan nama Chart
+      // lalu simpan ke local storage dengan nama Chart
       const parsed = JSON.stringify(this.bagsUser);
       localStorage.setItem("Chart", parsed);
       // buat notifikasi succes ditambahkan

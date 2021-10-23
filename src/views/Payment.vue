@@ -18,14 +18,14 @@
       </p>
       <div class="container-bank">
         <div class="bank">
-          <img src="assets/img/bca.png" alt="" />
+          <img src="assets/img/bca.png" alt="bank bca" />
           <div class="detail-bank">
             <p>Bank BCA - 2330350647</p>
             <p>Rifqi Hardinsa Musa</p>
           </div>
         </div>
         <div class="bank">
-          <img src="assets/img/mandiri.png" alt="" />
+          <img src="assets/img/mandiri.png" alt="bank mandiri" />
           <div class="detail-bank">
             <p>Bank Mandiri - 1320017419327</p>
             <p>Rifqi Hardinsa Musa</p>
@@ -62,6 +62,7 @@ export default {
     };
   },
   methods: {
+    // ambil data file yang diupload
     handleFile(event) {
       this.payment = event.target.files[0];
     },
@@ -69,27 +70,38 @@ export default {
       const paymentFile = new FormData();
       paymentFile.append("payment", this.payment, this.payment.name);
 
-      let order = {
+      // tampung semua data yang akan dikirim
+      let dataOrder = {
         name: this.orderInfo.name,
-        phone_number: this.orderInfo.phone_number,
         address: this.orderInfo.address,
+        phone_number: this.orderInfo.phone_number,
         zip: this.orderInfo.zip,
         toping: this.orderInfo.toping,
-        payment: this.payment.name,
         quantity: this.orderInfo.quantity,
-        transaction_status: "PENDING",
+        payment: this.payment,
         transaction_total: this.orderInfo.transaction_total,
+        transaction_status: "SUCCESS",
         transaction: this.orderInfo.transaction,
       };
 
       axios
-        .post("http://127.0.0.1:8000/api/checkout", order)
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((err) => console.log(err));
-      console.log(order);
-      this.$router.push({ path: "/myorder" });
+        .post("https://127.0.0.1:8000/api/checkout", dataOrder)
+        .then(
+          () =>
+            // notifikasi order berhasil
+            this.$swal({
+              icon: "success",
+              title: "You Order is Success !",
+              showConfirmButton: false,
+              time: 1500,
+            }),
+          // redicert halaman ke myorder
+          this.$router.push({ path: "/success" }),
+          // hapus localstorage ordered
+          localStorage.removeItem("Ordered"),
+          console.log(dataOrder)
+        )
+        .catch((error) => console.log(error));
     },
   },
   mounted() {

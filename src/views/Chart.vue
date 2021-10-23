@@ -85,7 +85,6 @@
               type="number"
               name="zip"
               placeholder=" Zip address"
-              max="5"
               v-model="orderInfo.zip"
               required
             />
@@ -161,15 +160,15 @@ export default {
         this.orderInfo.address &&
         this.orderInfo.zip
       ) {
-        // mengambil menu yang apa saja yang diambil
+        // mengambil menu yang apa saja yang dipilih
         let menuId = this.bagsUser.map(function (menu) {
           return menu.id;
         });
-        // mengambil data toping sesuai dengan yang di pilih
+        // mengambil data toping sesuai dengan yang dipilih
         let toping = this.bagsUser.map(function (tp) {
           return tp.toping;
         });
-        // mengambil data quantity tiap menu
+        // mengambil data quantity tiap menu yang dipilih
         let qty = this.bagsUser.map(function (qty) {
           return qty.quantity;
         });
@@ -178,10 +177,9 @@ export default {
           name: this.orderInfo.name,
           phone_number: this.orderInfo.phoneNumber,
           address: this.orderInfo.address,
-          zip: this.orderInfo.zip,
-          payment: "struk.png",
-          toping: toping.toString(),
-          quantity: qty.toString(),
+          zip: parseInt(this.orderInfo.zip),
+          toping: toping,
+          quantity: qty,
           transaction_total: this.total,
           transaction: menuId,
         };
