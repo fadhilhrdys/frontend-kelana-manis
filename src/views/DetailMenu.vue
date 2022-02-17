@@ -4,7 +4,7 @@
     <!-- Detail Menu -->
     <div class="container-detail-menu">
       <div class="images-detail-menu">
-        <img :src="menu.photo" alt="" />
+        <img :src="menu.photo" alt="photo" />
       </div>
       <div class="detail-menu">
         <h1>{{ menu.name }}</h1>
@@ -62,7 +62,6 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
-import axios from "axios";
 
 export default {
   name: "DetailMenu",
@@ -71,14 +70,13 @@ export default {
   },
   data() {
     return {
-      menu: {},
       bagsUser: [],
       qty: 1,
     };
   },
   methods: {
-    setMenu(data) {
-      this.menu = data;
+    getDataId(param) {
+      this.$store.dispatch("menu/getDetailMenu", { id: param });
     },
     getToping() {
       const checkToping = document.getElementById("toping");
@@ -132,11 +130,15 @@ export default {
       this.$router.push({ path: "/chart" });
     },
   },
+  computed: {
+    menu() {
+      return this.$store.getters["menu/detailMenu"];
+    },
+  },
   mounted() {
-    axios
-      .get("http://127.0.0.1:8000/api/menus?id=" + this.$route.params.id)
-      .then((response) => this.setMenu(response.data.data))
-      .catch((error) => console.log(error));
+    this.$store.dispatch("menu/getMenu");
+    let id = this.$route.params.id;
+    this.getDataId(id);
     // cek jika local storage ada item
     if (localStorage.getItem("Chart")) {
       try {

@@ -54,7 +54,7 @@ export default {
     Footer,
   },
   mounted() {
-    let countDownDate = new Date("October 23, 2021 14:39:00").getTime();
+    let countDownDate = new Date("October 23, 2022 14:39:00").getTime();
     let countDown = setInterval(() => {
       let dateNow = new Date().getTime();
       let distance = countDownDate - dateNow;
